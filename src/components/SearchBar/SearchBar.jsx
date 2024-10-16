@@ -1,19 +1,23 @@
+import toast from "react-hot-toast";
+
 export default function SearchBar({ onSubmit }) {
   const handleSubmit = (e) => {
     e.preventDefault();
-    const query = e.target.elements.search.trim().toLowerCase();
+    const query = e.target.search.value.trim().toLowerCase();
 
     if (query === "") {
-      return "Fullfil the space";
+      toast.error("Fullfill the empty stroke");
+      return;
     }
     onSubmit(query);
-    console.log(onSubmit);
-    handleSubmit.reset();
+
+    e.target.reset();
   };
   return (
     <header>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
+          name="search"
           type="text"
           autoComplete="off"
           autoFocus

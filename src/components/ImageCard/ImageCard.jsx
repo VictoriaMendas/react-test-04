@@ -1,10 +1,14 @@
-export default function ImageCard({onImageClick}) {
-   const handleClick = () => {
-    onImageClick(image)
-   }
+export default function ImageCard({ image, onImageClick }) {
+  const handleClick = () => {
+    onImageClick(image);
+  };
   return (
     <div>
-      <img src={image} alt={image.username} />
+      <img
+        src={image.urls.small}
+        alt={image.alt_description}
+        onClick={handleClick}
+      />
     </div>
   );
 }
