@@ -27,7 +27,7 @@ function App() {
         setIsLoading(true);
         setError("");
         const data = await fetchImages(query, page);
-        //
+        console.log(data);
         setImages((prevImages) => {
           return [...prevImages, ...data.results];
         });
