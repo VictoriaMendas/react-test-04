@@ -8,7 +8,6 @@ import ErrorMessage from "./components/ErrorMessage/ErrorMessage";
 import { Toaster } from "react-hot-toast";
 
 import ImageModal from "./components/ImageModal/ImageModal";
-import { IoSearchOutline } from "react-icons/io5";
 
 function App() {
   const [images, setImages] = useState([]);
@@ -42,7 +41,7 @@ function App() {
 
   const getQuery = async (query) => {
     setQuery(query);
-    setPage(1);
+    setImages([]);
   };
   const onLoadMoreBtn = async () => {
     setPage(page + 1);

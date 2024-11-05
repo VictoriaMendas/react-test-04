@@ -10,6 +10,8 @@
   height: 25px;
   border-radius: 30px;
   margin-top: 3px;
+  padding-left: 10px;
+  cursor: pointer;
 }
 .header {
   background-color: blue;
