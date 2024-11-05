@@ -1,0 +1,15 @@
+.btnMore {
+  border: transparent;
+  background-color: rgba(96, 96, 221, 0.726);
+  color: aliceblue;
+  padding: 10px 15px;
+  border-radius: 30px;
+}
+.btnLoadMore {
+  display: flex;
+  justify-content: center;
+}
+.btnMore:hover,
+.btnMore:focus {
+  background-color: darkcyan;
+}

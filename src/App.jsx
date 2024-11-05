@@ -8,6 +8,7 @@ import ErrorMessage from "./components/ErrorMessage/ErrorMessage";
 import { Toaster } from "react-hot-toast";
 
 import ImageModal from "./components/ImageModal/ImageModal";
+import { IoSearchOutline } from "react-icons/io5";
 
 function App() {
   const [images, setImages] = useState([]);
@@ -27,7 +28,6 @@ function App() {
         setIsLoading(true);
         setError("");
         const data = await fetchImages(query, page);
-        console.log(data);
         setImages((prevImages) => {
           return [...prevImages, ...data.results];
         });

@@ -1,4 +1,5 @@
 import Modal from "react-modal";
+import css from "./ImageModal.module.css";
 
 const customStyles = {
   content: {
@@ -22,7 +23,7 @@ export default function ImageModal({ modalIsOpen, closeModal, modalData }) {
       shouldCloseOnOverlayClick={true}
       shouldCloseOnEsc={true}
     >
-      <button onClick={closeModal}>close</button>
+      <button onClick={closeModal} className={css.closeBtnModal}></button>
 
       {modalData && (
         <img src={modalData.urls.regular} alt={modalData.alt_description} />
